@@ -1,0 +1,132 @@
+<head>
+<link rel="stylesheet" type="text/css" href="https://arman102.github.io/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script> <!-- include socket.io client side script -->
+<script src="https://arman102.github.io/app.js"></script>
+</body>
+<div class="container-fluid">
+  <div id="sha_app" class="row">
+    <!-- Start Section Header Bar -->
+    <section id="sha_header_bar" class="col-12">
+      <div class="row">
+        <div class="col-12">
+          <i class="fa fa-chevron-left"></i>
+        </div>
+        <div class="col-12">
+          <p><span id="datetime"></span></p>
+          <span class="heading">Smart Home </span>
+        </div>
+      </div>
+    </section>
+    <!-- End Section Header Bar -->
+
+    <!-- Start Section Button List -->
+    <section id="sha_button_list" class="col-12">
+      <div class="row">
+        <div class="col-12">
+          <ul>
+		   
+            <li class="on">
+                <label class="switch" id ="ligh">
+				<input type="checkbox" id ="light">
+				<span class="slider round"></span>
+				</label>
+            </li>
+             <li class="on">
+                <label class="switch" >
+				<input type="checkbox" id ="light1">
+				<span class="slider round"></span>
+				</label>
+            </li>
+            <li class="on">
+                <label class="switch" >
+				<input type="checkbox" >
+				<span class="slider round"></span>
+				</label>
+            </li>
+            <li class="on">
+                <label class="switch" >
+				<input type="checkbox" >
+				<span class="slider round"></span>
+				</label>
+            </li>
+            <li class="on">
+              <span>
+                <i class="fa fa-plus"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Section Button List -->
+
+    <!-- Start Section Body 1 -->
+    <section id="sha_temp_body" class="col-12">
+      <div class="row">
+        <div class="col-12">
+          <span class="sha_temp">
+            <span>
+              <span class="temp-data">{4}<sup>&deg;C</sup> </span>
+              <span class="temp-info">
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- End Section Body 1 -->
+	 
+<a class="weatherwidget-io" href="https://forecast7.com/hr/43d3417d81/mostar/" data-label_1="Mostar" data-label_2="Vremenska prognoza" data-theme="original" >Mostar Vremenska prognoza</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+	
+    <!-- Start Section Body 2 -->
+    <section id="sha_temp_meta" class="col-12">
+      <div class="row">
+        <div class="col-12 sha_tile">
+          <div>
+            <span class="tile_icon">
+              <i class="fa fa-fire"></i>
+            </span>
+            <span class="tile_info">
+              Vlaznost zraka
+              <span>21%</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Section Body 2 -->
+
+    <!-- Start Section Footer -->
+    <section id="sha_footer" class="col-12">
+      <div class="row">
+        <div class="col-8">
+          <div>
+            <span class="footer_title">
+              Trenutna temperatura
+            </span>
+            <span class="footer_data">
+              22 <span class="unit">&deg;C</span>
+            </span>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- End Section Footer -->
+  </div>
+</div>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
